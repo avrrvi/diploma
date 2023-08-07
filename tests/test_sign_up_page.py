@@ -5,7 +5,7 @@ from pages.results import ResultPage
 def test_1(driver):
     page_title = SignUpPage(driver)
     page_title.open_page()
-    assert page_title.main_title.text == 'GymPad - Регистрация'
+    assert driver.title == 'GymPad - Регистрация'
 
 
 def test_2(driver):

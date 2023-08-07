@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-acc_title = (By.ID, 'headerMonthYear')
+acc_h1 = (By.ID, 'headerMonthYear')
 
 add_workout = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/button[1]')
 add_workout_2 = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/a/i')
@@ -28,16 +28,13 @@ ready_btn = (By.XPATH, '//*[@id="modalContent"]/div[3]/button[2]')
 res = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/table/tbody/tr[2]')
 
 save_btn = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/button[1]')
-
-w = (By.XPATH, '//div[@class="w"]')
-r = (By.XPATH, '//div[@class="r"]')
 sum = (By.CSS_SELECTOR, '#linkToday > table > tbody > tr > td.middle > div.tonnage.pull-right > span')
-
 
 clear = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/button[2]')
 delete = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/ul/li[5]/a')
 submit_clear = (By.XPATH, '//button[starts-with(@id, "confirm-ok")]')
-cleared = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/div[3]')
+wait = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/div[3]')
+cleared = (By.XPATH, '//*[@id="count"]')
 
 calendar = (By.XPATH, '//*[@id="workoutCalendar"]/i')
 day = (By.XPATH, '//*[@id="monthSelect"]/div/table/tbody/tr[3]/td[5]/a')

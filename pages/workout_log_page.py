@@ -12,7 +12,7 @@ class WorkOutPage(BasePage):
         self.find(login_loc.login_btn).click()
 
     def acc(self):
-        return self.find(loc.acc_title).text
+        return self.find(loc.acc_h1).text
 
     def add_workout_btn(self):
         return self.find(loc.add_workout).click()
@@ -78,23 +78,21 @@ class WorkOutPage(BasePage):
     def button_save(self):
         return self.find(loc.save_btn).click()
 
-    @property
-    def w(self):
-        return self.find_all(loc.w)
-
-    @property
-    def r(self):
-        return self.find_all(loc.r)
-
-    # @property
     def sum(self):
         self.wait_until_visibility(loc.sum)
         return self.find(loc.sum).text
 
     def clear_all(self):
+        self.wait_until_visibility(loc.clear)
         self.find(loc.clear).click()
+        self.wait_until_visibility(loc.delete)
         self.find(loc.delete).click()
+        self.wait_until_visibility(loc.submit_clear)
         self.find(loc.submit_clear).click()
+
+    # @property
+    def cleared(self):
+        self.driver.implicitly_wait(10)
         return self.find(loc.cleared)
 
     def click_calendar(self):

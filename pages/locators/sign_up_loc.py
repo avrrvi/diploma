@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
 
 
-title = (By.XPATH, '//title')
-
 text_of_selector = '.ulogin-button-'
 signup_by_vk = (By.CSS_SELECTOR, f'{text_of_selector}vkontakte')
 signup_by_fb = (By.CSS_SELECTOR, f'{text_of_selector}facebook')

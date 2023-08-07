@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
 
 
-title = (By.TAG_NAME, 'title')
-
 email = (By.NAME, 'email')
 passw = (By.NAME, 'password')
 login_btn = (By.ID, 'login-submit')
