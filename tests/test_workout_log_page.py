@@ -112,3 +112,13 @@ def test_7(driver):
     clear.registr('a@gmail.com', 'a')
     clear.clear_all()
     assert clear.clear_all().text == 'Тренировка не записана'
+
+
+def test_8(driver):
+    calendar = WorkOutPage(driver)
+    calendar.open_page()
+    calendar.registr('a@gmail.com', 'a')
+    calendar.click_calendar()
+    calendar.choose_day.click()
+    assert driver.current_url == f'{calendar.base_page_url}/workouts/month/8/year/2023/day/18'
+

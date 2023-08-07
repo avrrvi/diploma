@@ -96,3 +96,11 @@ class WorkOutPage(BasePage):
         self.find(loc.delete).click()
         self.find(loc.submit_clear).click()
         return self.find(loc.cleared)
+
+    def click_calendar(self):
+        return self.find(loc.calendar).click()
+
+    @property
+    def choose_day(self):
+        self.wait_until_visibility(loc.day)
+        return self.find(loc.day)

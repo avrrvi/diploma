@@ -38,3 +38,6 @@ clear = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/button[2]'
 delete = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/ul/li[5]/a')
 submit_clear = (By.XPATH, '//button[starts-with(@id, "confirm-ok")]')
 cleared = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/div[3]')
+
+calendar = (By.XPATH, '//*[@id="workoutCalendar"]/i')
+day = (By.XPATH, '//*[@id="monthSelect"]/div/table/tbody/tr[3]/td[5]/a')
