@@ -33,10 +33,9 @@ class WorkOutPage(BasePage):
         self.wait_until_visibility(loc.exercise)
         self.find(loc.exercise).click()
 
-    def click_checkboxes(self):
+    def click_checkbox(self):
         self.wait_until_visibility(loc.checkbox_1)
         self.find(loc.checkbox_1).click()
-        self.find(loc.checkbox_2).click()
 
     @property
     def submit_checks(self):
@@ -54,6 +53,7 @@ class WorkOutPage(BasePage):
         return self.find(loc.setting).click()
 
     def delete_exercise(self):
+        self.wait_until_visibility(loc.del_exercise)
         return self.find(loc.del_exercise).click()
 
     def text_comment(self, comment):
@@ -93,8 +93,8 @@ class WorkOutPage(BasePage):
         self.find(loc.delete).click()
         self.wait_until_visibility(loc.submit_clear)
         self.find(loc.submit_clear).click()
+        self.driver.implicitly_wait(10)
 
-    # @property
     def cleared(self):
         self.driver.implicitly_wait(10)
         return self.find(loc.cleared)

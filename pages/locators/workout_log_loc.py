@@ -22,7 +22,7 @@ del_exercise = (By.XPATH, '//*[@id="modalMdContent"]/div[2]/div/button')
 text_comment = (By.XPATH, '//*[@id="modalContent"]/div[2]/div[1]/input')
 add_comment = (By.XPATH, '//*[@id="modalContent"]/div[3]/button')
 
-additional = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/a[1]/i')
+additional = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a[1]/i')
 kg = (By.XPATH, '//*[@id="modalContent"]/div[2]/div[1]/input[1]')
 repeat = (By.XPATH, '//*[@id="modalContent"]/div[2]/div[1]/input[2]')
 next_btn = (By.XPATH, '//*[@id="modalContent"]/div[3]/button[1]')

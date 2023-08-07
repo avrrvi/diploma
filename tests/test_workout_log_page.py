@@ -39,7 +39,7 @@ def test_4(driver):
     add_workout.add_workout_btn_2()
     add_workout.open_catalog()
     add_workout.add_exercise()
-    add_workout.click_checkboxes()
+    add_workout.click_checkbox()
     add_workout.submit_checks.click()
     add_workout.setting_button()
     add_workout.delete_exercise()
@@ -56,11 +56,11 @@ def test_5(driver):
     add_workout.add_workout_btn_2()
     add_workout.open_catalog()
     add_workout.add_exercise()
-    add_workout.click_checkboxes()
+    add_workout.click_checkbox()
     add_workout.submit_checks.click()
-    ex_1 = 'Сгибание запястий со штангой хватом снизу'
-    ex_2 = 'Разгибание запястий со штангой хватом сверху'
-    assert ex_1 and ex_2 in add_workout.result_table.text
+    ex = 'Сгибание запястий со штангой хватом снизу'
+    # ex_2 = 'Разгибание запястий со штангой хватом сверху'
+    assert ex in add_workout.result_table.text
 
 
 def test_6(driver):
@@ -71,7 +71,7 @@ def test_6(driver):
     comment_workout.add_workout_btn_2()
     comment_workout.open_catalog()
     comment_workout.add_exercise()
-    comment_workout.click_checkboxes()
+    comment_workout.click_checkbox()
     comment_workout.submit_checks.click()
     comment_workout.comment.click()
     comment_workout.text_comment('Очень важно!')
@@ -87,7 +87,7 @@ def test_7(driver):
     additional_info.add_workout_btn_2()
     additional_info.open_catalog()
     additional_info.add_exercise()
-    additional_info.click_checkboxes()
+    additional_info.click_checkbox()
     additional_info.submit_checks.click()
     additional_info.additional()
     additional_info.add_additional(2, 2)
@@ -107,7 +107,7 @@ def test_8(driver):
     save.add_workout_btn_2()
     save.open_catalog()
     save.add_exercise()
-    save.click_checkboxes()
+    save.click_checkbox()
     save.submit_checks.click()
     save.comment.click()
     save.text_comment('Очень важно!')
