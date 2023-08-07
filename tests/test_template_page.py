@@ -49,6 +49,3 @@ def test_4(driver):
     add_new_tmp.open_template()
     add_new_tmp.open_template_2()
     assert new_name in add_new_tmp.result_2.text
-
-
-
