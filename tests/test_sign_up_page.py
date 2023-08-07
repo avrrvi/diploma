@@ -1,7 +1,5 @@
 from pages.sign_up_page import SignUpPage
 from pages.results import ResultPage
-import datetime
-from translate import Translator
 
 
 def test_1(driver):
