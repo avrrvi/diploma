@@ -89,14 +89,7 @@ class WorkOutPage(BasePage):
         return self.find(loc.sum).text
 
     def clear_all(self):
-        self.wait_until_visibility(loc.clear)
         self.find(loc.clear).click()
-        self.wait_until_visibility(loc.delete)
         self.find(loc.delete).click()
-        self.wait_until_visibility(loc.submit_clear)
         self.find(loc.submit_clear).click()
-
-    @property
-    def cleared(self):
         return self.find(loc.cleared)
-

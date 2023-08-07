@@ -90,7 +90,7 @@ def test_8(driver):
 def test_9(driver):
     right_datas = SignUpPage(driver)
     right_datas.open_page()
-    right_datas.email('9@gmail.com')
+    right_datas.email('11@gmail.com')
     right_datas.fname('a')
     right_datas.lname('a')
     right_datas.passw('a')

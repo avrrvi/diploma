@@ -15,7 +15,6 @@ def test_2(driver):
     add_workout = WorkOutPage(driver)
     add_workout.open_page()
     add_workout.registr('a@gmail.com', 'a')
-    add_workout.clear_all()
     add_workout.add_workout_btn()
     add_workout.add_workout_btn_2()
     add_workout.add_exercise()
@@ -75,17 +74,10 @@ def test_5(driver):
 
 
 def test_6(driver):
-    clear = WorkOutPage(driver)
-    clear.open_page()
-    clear.registr('a@gmail.com', 'a')
-    clear.clear_all()
-    assert clear.cleared.text == 'Тренировка не записана'
-
-
-def test_7(driver):
     save = WorkOutPage(driver)
     save.open_page()
     save.registr('a@gmail.com', 'a')
+    save.clear_all()
     save.add_workout_btn()
     save.add_workout_btn_2()
     save.add_exercise()
@@ -103,4 +95,9 @@ def test_7(driver):
     assert save.sum() == '13'
 
 
-
+def test_7(driver):
+    clear = WorkOutPage(driver)
+    clear.open_page()
+    clear.registr('a@gmail.com', 'a')
+    clear.clear_all()
+    assert clear.clear_all().text == 'Тренировка не записана'

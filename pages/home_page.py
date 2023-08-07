@@ -18,12 +18,5 @@ class HomePage(BasePage):
     def click_logo(self):
         self.find(loc.logo).click()
 
-    # def clickable_btns(self):
-    #     return self.find_all(loc.btns)
-
-    # def enter_search_phrase(self, phrase):
-    #     self.find(loc.search_field).send_keys(phrase)
-    #     self.find(loc.search_button).click()
-
     def wait(self):
         self.wait_until_visibility(loc.main_title)

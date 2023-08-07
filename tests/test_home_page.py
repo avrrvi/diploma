@@ -31,20 +31,3 @@ def test_4(driver):
     logo.click_logo()
     res = ResultPage(driver).curr_page_url
     assert driver.current_url == res
-
-
-# def test_5(driver):
-    # btns = HomePage(driver)
-    # btns.open_page()
-    # btns.wait()
-    # btns.scroll()
-    # for buttons in btns.clickable_btns():
-    #     assert buttons.is_displayed()
-
-
-# def test_5_search_field(driver):
-#     search = HomePage(driver)
-#     search.open_page()
-#     search.enter_search_phrase('what? where? when?')
-#     res = ResultPage(driver).curr_page_url
-#     assert driver.current_url == res
