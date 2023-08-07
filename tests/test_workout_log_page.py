@@ -1,5 +1,4 @@
 from pages.workout_log_page import WorkOutPage
-from time import sleep
 
 
 def test_1(driver):
