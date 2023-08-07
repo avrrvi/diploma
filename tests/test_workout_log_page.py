@@ -100,10 +100,7 @@ def test_7(driver):
     save.add_additional(3, 3)
     save.button_ready()
     save.button_save()
-    list_w = [int(element.text) for element in save.w]
-    list_r = [int(element.text) for element in save.r]
-    # sum(list_w) + sum(list_r)
-    assert sum(list_w[i]*list_r[i] for i in list_w and list_r) == save.sum()
+    assert save.sum() == '13'
 
 
 
