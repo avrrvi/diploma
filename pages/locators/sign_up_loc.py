@@ -20,5 +20,3 @@ sign_up = (By.ID, 'registration-submit')
 
 wait_loc = (By.CLASS_NAME, 'notice')
 empty_err_mess = (By.CSS_SELECTOR, '.alert.alert-danger.alert-login')
-
-acc_title = (By.ID, 'headerMonthYear')

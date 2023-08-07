@@ -85,17 +85,3 @@ def test_8(driver):
     err.repeat_passw('a')
     err.sign_up()
     assert err.err_mess() == f'Емейл не является правильным E-Mail адресом.'
-
-
-def test_9(driver):
-    right_datas = SignUpPage(driver)
-    right_datas.open_page()
-    right_datas.email('11@gmail.com')
-    right_datas.fname('a')
-    right_datas.lname('a')
-    right_datas.passw('a')
-    right_datas.repeat_passw('a')
-    right_datas.sign_up()
-    translator = Translator(from_lang="russian", to_lang="english")
-    translation = translator.translate(right_datas.acc().capitalize())
-    assert translation == datetime.datetime.now().strftime('%B, %Y')

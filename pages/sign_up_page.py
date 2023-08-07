@@ -65,6 +65,3 @@ class SignUpPage(BasePage):
     # @property
     def err_mess(self):
         return self.find(loc.empty_err_mess).text
-
-    def acc(self):
-        return self.find(loc.acc_title).text

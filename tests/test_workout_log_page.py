@@ -1,7 +1,18 @@
 from pages.workout_log_page import WorkOutPage
+import datetime
+from translate import Translator
 
 
 def test_1(driver):
+    right_datas = WorkOutPage(driver)
+    right_datas.open_page()
+    right_datas.registr('a@gmail.com', 'a')
+    translator = Translator(from_lang="russian", to_lang="english")
+    translation = translator.translate(right_datas.acc().capitalize())
+    assert translation == datetime.datetime.now().strftime('%B, %Y')
+
+
+def test_2(driver):
     click_btn = WorkOutPage(driver)
     click_btn.open_page()
     click_btn.registr('a@gmail.com', 'a')

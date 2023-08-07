@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+acc_title = (By.ID, 'headerMonthYear')
 
 add_workout = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/button[1]')
 add_workout_2 = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/a/i')

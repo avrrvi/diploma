@@ -11,6 +11,9 @@ class WorkOutPage(BasePage):
         self.find(login_loc.passw).send_keys(passw)
         self.find(login_loc.login_btn).click()
 
+    def acc(self):
+        return self.find(loc.acc_title).text
+
     def add_workout_btn(self):
         return self.find(loc.add_workout).click()
 
