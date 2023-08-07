@@ -21,6 +21,10 @@ class WorkOutPage(BasePage):
         self.wait_until_visibility(loc.add_workout_2)
         self.find(loc.add_workout_2).click()
 
+    def open_catalog(self):
+        self.wait_until_visibility(loc.open_catalog)
+        return self.find(loc.open_catalog).click()
+
     @property
     def add_workout_btn_3(self):
         return self.find_all(loc.add_workout_3)

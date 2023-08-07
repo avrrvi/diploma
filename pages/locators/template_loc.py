@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 
 page = (By.XPATH, '//*[@id="sidebar-nav"]/ul/li[2]/a')
 
+open_catalog = (By.XPATH, '//*[@id="modalExercisesContent"]/div[2]/div/ul/li[2]/a')
+
 add_template_btn = (By.XPATH, '//*[@id="content-wrapper"]/div[1]/div/div[2]/div/div/div[2]/div/a')
 name_field = (By.XPATH, '//*[@id="f_name"]')
 description_field = (By. XPATH, '//*[@id="f_description"]')

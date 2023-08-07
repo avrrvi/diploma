@@ -40,6 +40,8 @@ class TemplatePage(BasePage):
     def create_tmp(self, new_name):
         self.find(loc.new_name).send_keys(new_name)
         self.find(loc.add_btn).click()
+        self.wait_until_visibility(loc.open_catalog)
+        self.find(loc.open_catalog).click()
         self.wait_until_visibility(workout_log_loc.exercise)
         self.find(workout_log_loc.exercise).click()
         self.wait_until_visibility(workout_log_loc.checkbox_1)

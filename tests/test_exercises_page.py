@@ -14,6 +14,7 @@ def test_2(driver):
     click_btns.open_page()
     click_btns.registr('a@gmail.com', 'a')
     click_btns.click_page()
+    click_btns.click_catalog()
     for exs in click_btns.click_exs:
         assert exs.is_displayed()
 
