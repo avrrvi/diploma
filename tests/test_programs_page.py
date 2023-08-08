@@ -26,4 +26,3 @@ def test_3(driver):
     add_prog.click_btn()[0].click()
     assert driver.current_url == f'{add_prog.base_page_url}/templates'
     assert add_prog.added_tmp.text in add_prog.added_res.text
-

@@ -29,6 +29,7 @@ def test_3(driver):
     description = 'abvg'
     del_template.add_template(name, description)
     del_template.open_template()
+    del_template.scroll(pix=2000)
     del_template.delete_template()
     assert name not in del_template.result.text
 
