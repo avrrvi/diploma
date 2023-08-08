@@ -1,7 +1,6 @@
 from pages.workout_log_page import WorkOutPage
 import datetime
 from translate import Translator
-from time import sleep
 import allure
 
 
@@ -177,9 +176,7 @@ def test_9_clear(driver):
     with allure.step('Save changes'):
         clear.button_save()
     with allure.step('Clear all'):
-        # sleep(3)
         clear.clear_all()
-        # sleep(3)
     assert clear.cleared().text == '0'
 
 
