@@ -1,6 +1,5 @@
 from pages.nutrition_page import NutritionPage
 import random
-from time import sleep
 
 
 def test_1(driver):
