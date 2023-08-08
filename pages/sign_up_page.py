@@ -6,10 +6,6 @@ class SignUpPage(BasePage):
     page_url = '/registration/'
 
     @property
-    def main_title(self):
-        return self.find(loc.title)
-
-    @property
     def signup_by_vk(self):
         return self.find(loc.signup_by_vk)
 
