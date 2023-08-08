@@ -11,6 +11,8 @@ class NutritionPage(BasePage):
         self.find(login_loc.passw).send_keys(passw)
         self.find(login_loc.login_btn).click()
 
-
     def click_page(self):
         return self.find(loc.page).click()
+
+    def click_day(self):
+        return self.find(loc.choose_day).click()
