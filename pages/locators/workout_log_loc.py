@@ -32,6 +32,8 @@ res = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[2]/table/tbody/tr[2]')
 save_btn = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/button[1]')
 sum = (By.CSS_SELECTOR, '#linkToday > table > tbody > tr > td.middle > div.tonnage.pull-right > span')
 
+wait_1 = (By.XPATH, '//td[3]/div/div/button[contains(text(), "Обновить")] ')
+wait_2 = (By.XPATH, '//*[@id="count"][contains(text(), "0")]')
 clear = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/button[2]')
 delete = (By.XPATH, '//*[@id="linkToday"]/table/tbody/tr/td[3]/div/div/ul/li[5]/a')
 submit_clear = (By.XPATH, '//button[starts-with(@id, "confirm-ok")]')

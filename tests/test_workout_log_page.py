@@ -167,9 +167,19 @@ def test_9_clear(driver):
         clear.open_page()
     with allure.step('LogIn'):
         clear.registr('a@gmail.com', 'a')
+    with allure.step('Add workouts'):
+        clear.add_workout_btn()
+        clear.add_workout_btn_2()
+        clear.open_catalog()
+        clear.add_exercise()
+        clear.click_checkbox()
+        clear.submit_checks.click()
+    with allure.step('Save changes'):
+        clear.button_save()
     with allure.step('Clear all'):
+        # sleep(3)
         clear.clear_all()
-        sleep(3)
+        # sleep(3)
     assert clear.cleared().text == '0'
 
 

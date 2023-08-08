@@ -87,7 +87,7 @@ class WorkOutPage(BasePage):
         return self.find(loc.sum).text
 
     def clear_all(self):
-        self.wait_until_visibility(loc.clear)
+        self.wait_until_visibility(loc.wait_1)
         self.find(loc.clear).click()
         self.wait_until_visibility(loc.delete)
         self.find(loc.delete).click()
@@ -96,7 +96,7 @@ class WorkOutPage(BasePage):
         self.driver.implicitly_wait(10)
 
     def cleared(self):
-        self.driver.implicitly_wait(10)
+        self.wait_until_visibility(loc.wait_2)
         return self.find(loc.cleared)
 
     def click_calendar(self):
